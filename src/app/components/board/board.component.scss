@@ -1,0 +1,23 @@
+main {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-gap: 0;
+}
+
+main {
+  margin-left: 20em;
+  margin-top: 2em;
+}
+square {
+  border: 1px solid black;
+  height: 200px;
+}
+
+button {
+  height: 40px;
+  width: 12%;
+  border: 1px solid cyan;
+  color: cyan;
+  background: transparent;
+  margin-left: 42em;
+}
