@@ -1,0 +1,11 @@
+ <div class="wheel-page">
+  <button class="board-route" routerLink="/board">Go to TictacToe</button>
+
+  <div id="main-box">
+    <fa-icon [icon]="faCaretDown"></fa-icon>
+    <img id="wheel" src="assets/img/spinning-wheel.jpg" alt="wheel" />
+  </div>
+
+  <button (click)="spin()" class="spin">Spin</button>
+ </div>
+

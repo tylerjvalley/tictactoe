@@ -1,8 +1,15 @@
-<h1>Current Player: {{player}}</h1>
-<button (click)="newGame()">Start new game</button>
+<div class="tictactoe-page">
+  <button class="spin-page" routerLink="/spin">Go to Spin Wheel</button>
 
-<h2 *ngIf="winner">Player {{winner}} won the game!</h2>
+  <div class="top">
+    <h1>Current Player: {{player}}</h1>
+    <button (click)="newGame()">Start new game</button>
+    <h2 *ngIf="winner">Player {{winner}} won the game!</h2>
+  </div>
 
-<main>
-  <square *ngFor="let val of squares; let i = index" [value]="val" (click)="makeMove(i)"></square>
-</main>
+
+  <main>
+    <square *ngFor="let val of squares; let i = index" [value]="val" (click)="makeMove(i)"></square>
+  </main>
+</div>
+

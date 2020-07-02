@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'board',
@@ -10,7 +11,7 @@ export class BoardComponent implements OnInit {
   xIsNext: boolean;
   winner: string;
 
-  constructor() { }
+  constructor( readonly router: Router ) { }
 
   ngOnInit() {
 

@@ -1,23 +1,35 @@
-main {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-gap: 0;
+.tictactoe-page {
+  text-align: center;
+  button {
+    height: 40px;
+    width: 12%;
+    border: 1px solid cyan;
+    color: cyan;
+    background: transparent;
+    border-radius: 4px;
+  }
+
+  .spin-page {
+    border: 1px solid red;
+    color: red;
+    position: absolute;
+    right: 10px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 0;
+    margin-left: 20em;
+    margin-top: 2em;
+
+    square {
+      border: 1px solid black;
+      height: 200px;
+    }
+  }
 }
 
-main {
-  margin-left: 20em;
-  margin-top: 2em;
-}
-square {
-  border: 1px solid black;
-  height: 200px;
-}
 
-button {
-  height: 40px;
-  width: 12%;
-  border: 1px solid cyan;
-  color: cyan;
-  background: transparent;
-  margin-left: 42em;
-}
+
+
