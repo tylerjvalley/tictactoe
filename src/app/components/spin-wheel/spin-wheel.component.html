@@ -1,6 +1,8 @@
  <div class="wheel-page">
   <button class="board-route" routerLink="/board">Go to TictacToe</button>
 
+  <h1 *ngIf="color">Your color is {{color}}</h1>
+
   <div id="main-box">
     <fa-icon [icon]="faCaretDown"></fa-icon>
     <img id="wheel" src="assets/img/spinning-wheel.jpg" alt="wheel" />
