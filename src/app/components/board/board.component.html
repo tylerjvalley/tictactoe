@@ -9,7 +9,7 @@
 
 
   <main>
-    <square *ngFor="let val of squares; let i = index" [value]="val" (click)="makeMove(i)"></square>
+    <square *ngFor="let val of squares; let i = index" [value]="val" (click)="makeMove(i)" id="square"></square>
   </main>
 </div>
 

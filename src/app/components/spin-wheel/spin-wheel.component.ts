@@ -10,6 +10,8 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 export class SpinWheelComponent implements OnInit {
   faCaretDown = faCaretDown;
   color:string;
+  deg:number = 0;
+  spins:number = 1;
 
   constructor( readonly router: Router ) {}
 
@@ -21,24 +23,29 @@ export class SpinWheelComponent implements OnInit {
     const x:number = 5004; //min value
     const y:number = 5364; //max value
 
-    let deg:number = Math.floor(Math.random() * (x - y)) + y;
 
-    if ( deg <= 5075 ) {
+    if ( this.spins <= 1 ) {
+     this.deg = Math.floor(Math.random() * (x - y)) + y;
+    } else if ( this.spins > 1 ) {
+      this.deg = this.deg * 2;
+    }
+    console.log(this.deg);
+
+    if ( this.deg <= 5075 ) {
       this.color = 'red';
-    } else if ( deg >= 5076 && deg <= 5148 ) {
+    } else if ( this.deg >= 5076 && this.deg <= 5148 ) {
       this.color = 'yellow';
-    } else if ( deg >= 5149 && deg <= 5220 ) {
+    } else if ( this.deg >= 5149 && this.deg <= 5220 ) {
       this.color = 'blue';
-    } else if ( deg >= 5221 && deg <= 5292 ) {
+    } else if ( this.deg >= 5221 && this.deg <= 5292 ) {
       this.color = 'white';
-    } else if ( deg >= 5293 ) {
+    } else if ( this.deg >= 5293 ) {
       this.color = 'green';
     }
 
-    element.style.transform = "rotate(" + deg + "deg)";
+    element.style.transform = "rotate(" + this.deg + "deg)";
+    this.spins += 1;
+    console.log(this.spins);
 
-    setTimeout(function() {
-      window.location.reload();
-    }, 6000);
   };
 }
