@@ -16,10 +16,12 @@ export class SpinWheelComponent implements OnInit {
   ngOnInit() {}
 
   spin() {
+
+    const element = document.getElementById("wheel");
     const x:number = 5004; //min value
     const y:number = 5364; //max value
 
-    const deg:number = Math.floor(Math.random() * (x - y)) + y;
+    let deg:number = Math.floor(Math.random() * (x - y)) + y;
 
     if ( deg <= 5075 ) {
       this.color = 'red';
@@ -33,6 +35,10 @@ export class SpinWheelComponent implements OnInit {
       this.color = 'green';
     }
 
-    document.getElementById("wheel").style.transform = "rotate(" + deg + "deg)";
+    element.style.transform = "rotate(" + deg + "deg)";
+
+    setTimeout(function() {
+      window.location.reload();
+    }, 6000);
   };
 }
