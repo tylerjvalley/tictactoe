@@ -20,8 +20,8 @@ export class SpinWheelComponent implements OnInit {
   spin() {
       const wheel = document.getElementById("wheel");
       const prizes = document.getElementById("prizes");
-      const x: number = 1004; //min value
-      const y: number = 1364; //max value
+      const x: number = 2004; //min value
+      const y: number = 2364; //max value
       this.spins += 1;
 
       this.deg = Math.floor(Math.random() * (x - y)) + y;
@@ -30,29 +30,29 @@ export class SpinWheelComponent implements OnInit {
         wheel.style.transform = "rotate(" + this.deg + "deg)";
         prizes.style.transform = "rotate(" + this.deg + "deg)";
       } else if (this.spins === 2) {
-        wheel.style.transform = "rotate(" + (this.deg + 1400) + "deg)";
-        prizes.style.transform = "rotate(" + (this.deg + 1400) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 2400) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 2400) + "deg)";
       } else if (this.spins === 3) {
-        wheel.style.transform = "rotate(" + (this.deg + 2800) + "deg)";
-        prizes.style.transform = "rotate(" + (this.deg + 2800) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 3800) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 3800) + "deg)";
       } else if (this.spins === 4) {
-        wheel.style.transform = "rotate(" + (this.deg + 3600) + "deg)";
-        prizes.style.transform = "rotate(" + (this.deg + 3600) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 4600) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 4600) + "deg)";
       } else if (this.spins === 5) {
-        wheel.style.transform = "rotate(" + (this.deg + 4200) + "deg)";
-        prizes.style.transform = "rotate(" + (this.deg + 4200) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 5200) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 5200) + "deg)";
       } else if (this.spins === 6) {
-        wheel.style.transform = "rotate(" + (this.deg + 8400) + "deg)";
-        prizes.style.transform = "rotate(" + (this.deg + 8400) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 9400) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 9400) + "deg)";
       } else if (this.spins === 7) {
-        wheel.style.transform = "rotate(" + (this.deg + 16800) + "deg)";
-        prizes.style.transform = "rotate(" + (this.deg + 16800) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 17800) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 17800) + "deg)";
       } else if (this.spins === 8) {
-        wheel.style.transform = "rotate(" + (this.deg + 34600) + "deg)";
-        prizes.style.transform = "rotate(" + (this.deg + 34600) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 44600) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 44600) + "deg)";
       } else if (this.spins === 9) {
-        wheel.style.transform = "rotate(" + (this.deg + 691200) + "deg)";
-        prizes.style.transform = "rotate(" + (this.deg + 691200) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 791200) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 791200) + "deg)";
       } else if (this.spins === 2) {
         wheel.style.transform = "rotate(" + (this.deg + 1382400) + "deg)";
         prizes.style.transform = "rotate(" + (this.deg + 1382400) + "deg)";
