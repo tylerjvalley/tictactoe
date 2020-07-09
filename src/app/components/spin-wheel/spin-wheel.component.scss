@@ -10,8 +10,8 @@
 }
 
 #wheel {
-  width: 430px;
-  height: 500px;
+  width: 95%;
+  height: 100%;
   position: relative;
   transition: all ease 5s;
 }
@@ -26,13 +26,13 @@
 }
 
 .arrow{
-
+  top: -3em;
   display: block;
   color: rgb(8, 142, 196);
   height: 150px;
   width: 200px;
   position: absolute;
-  right: 37%;
+  right: 33%;
   margin: auto;
   z-index: 5;
 }
@@ -42,13 +42,13 @@
   width: 200px;
   position: absolute;
   z-index: 10;
-  left: 23%;
-  top: 34%;
+  left: 27.5%;
+  top: 33%;
 }
 
 #prizes {
   position: absolute;
-  left: -5%;
+  left: 0;
   height: 488px;
   width: 475px;
   transition: all ease 5s;
