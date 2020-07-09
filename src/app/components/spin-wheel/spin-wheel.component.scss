@@ -1,55 +1,51 @@
+.board-route {
+  height: 40px;
+  width: 12%;
+  border: 1px solid red;
+  color: red;
+  background: transparent;
+  border-radius: 4px;
+}
+
 .wheel-page {
   background: white;
 }
 
+
 #main-box {
-  margin: 5em auto;
   position: relative;
-  width: 500px;
-  height: 500px;
+  top: 0;
+  left: 13%;
+  margin: 15em auto;
 }
 
 #wheel {
-  width: 95%;
-  height: 100%;
   position: relative;
   transition: all ease 5s;
-}
-
-.board-route {
-   height: 40px;
-   width: 12%;
-   border: 1px solid red;
-   color: red;
-   background: transparent;
-   border-radius: 4px;
+  top: 0;
+  left: 0;
 }
 
 .arrow{
-  top: -3em;
+  top: -17em;
   display: block;
   color: rgb(8, 142, 196);
-  height: 150px;
-  width: 200px;
   position: absolute;
-  right: 33%;
+  right: 24%;
   margin: auto;
   z-index: 5;
 }
 
 #spin-btn {
-  height: 200px;
-  width: 200px;
   position: absolute;
   z-index: 10;
-  left: 27.5%;
-  top: 33%;
+  left: 0;
+  top: 0;
 }
 
 #prizes {
   position: absolute;
   left: 0;
-  height: 488px;
-  width: 475px;
+  top: 0;
   transition: all ease 5s;
 }
