@@ -19,16 +19,13 @@ export class SpinWheelComponent implements OnInit {
 
   spin() {
       const box = document.getElementById("main-box");
-      const x: number = 1004; //min value
-      const y: number = 1364; //max value
+      const baseRotations = 6;
+      const x: number = 1; //min value
+      const y: number = 1.360; //max value
+      const totalDegrees = (baseRotations + Math.floor(Math.random() * (x - y)) + y) * 360
       this.spins += 1;
 
-      this.deg = Math.floor(Math.random() * (x - y)) + y;
+      box.style.transform = "rotate(" + (totalDegrees * this.spins) + "deg)";
 
-      if (this.spins === 1) {
-        box.style.transform = "rotate(" + this.deg + "deg)";
-      } else if (this.spins >= 2) {
-        box.style.transform = "rotate(" + (this.deg * (this.spins)) + "deg)";
-      }
    }
 }
