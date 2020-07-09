@@ -38,7 +38,7 @@
    border-radius: 4px;
 }
 
-fa-icon {
+.arrow{
   font-size: 60px;
   display: block;
   color: rgb(8, 142, 196);
@@ -49,4 +49,20 @@ fa-icon {
   bottom: 50px;
   margin: auto;
   z-index: 5;
+}
+
+#spin-btn {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  z-index: 10;
+  left: 30%;
+  top: 34%;
+}
+
+#prizes {
+  position: absolute;
+  left: 1%;
+  height: 489px;
+  width: 489px;
 }

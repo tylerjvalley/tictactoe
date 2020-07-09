@@ -4,10 +4,11 @@
   <h1 *ngIf="color">Your color is {{color}}</h1>
 
   <div id="main-box" class="main-box">
-    <fa-icon [icon]="faCaretDown"></fa-icon>
-    <img id="wheel" src="assets/img/spinning-wheel.jpg" alt="wheel" />
+    <img src="assets/img/wheel-1-arrow.png" class="arrow">
+    <img id="wheel" src="assets/img/wheel-1-bg.png" alt="wheel" />
+    <img (click)="spin()" id="spin-btn" src="assets/img/wheel-1-spin.png" />
+    <img id="prizes" src="assets/img/wheel-prizes.png" />
   </div>
 
-  <button (click)="spin()" class="spin">Spin</button>
  </div>
 
