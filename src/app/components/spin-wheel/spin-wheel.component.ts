@@ -18,7 +18,8 @@ export class SpinWheelComponent implements OnInit {
   ngOnInit() {}
 
   spin() {
-      const element = document.getElementById("wheel");
+      const wheel = document.getElementById("wheel");
+      const prizes = document.getElementById("prizes");
       const x: number = 5004; //min value
       const y: number = 5364; //max value
       this.spins += 1;
@@ -40,25 +41,35 @@ export class SpinWheelComponent implements OnInit {
       }
 
       if (this.spins === 1) {
-        element.style.transform = "rotate(" + this.deg + "deg)";
+        wheel.style.transform = "rotate(" + this.deg + "deg)";
+        prizes.style.transform = "rotate(" + this.deg + "deg)";
       } else if (this.spins === 2) {
-        element.style.transform = "rotate(" + (this.deg + 5400) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 5400) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 5400) + "deg)";
       } else if (this.spins === 3) {
-        element.style.transform = "rotate(" + (this.deg + 10800) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 10800) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 10800) + "deg)";
       } else if (this.spins === 4) {
-        element.style.transform = "rotate(" + (this.deg + 21600) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 21600) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 21600) + "deg)";
       } else if (this.spins === 5) {
-        element.style.transform = "rotate(" + (this.deg + 43200) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 43200) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 43200) + "deg)";
       } else if (this.spins === 6) {
-        element.style.transform = "rotate(" + (this.deg + 86400) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 86400) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 86400) + "deg)";
       } else if (this.spins === 7) {
-        element.style.transform = "rotate(" + (this.deg + 172800) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 172800) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 172800) + "deg)";
       } else if (this.spins === 8) {
-        element.style.transform = "rotate(" + (this.deg + 345600) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 345600) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 345600) + "deg)";
       } else if (this.spins === 9) {
-        element.style.transform = "rotate(" + (this.deg + 691200) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 691200) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 691200) + "deg)";
       } else if (this.spins === 2) {
-        element.style.transform = "rotate(" + (this.deg + 1382400) + "deg)";
+        wheel.style.transform = "rotate(" + (this.deg + 1382400) + "deg)";
+        prizes.style.transform = "rotate(" + (this.deg + 1382400) + "deg)";
       }
 
 
