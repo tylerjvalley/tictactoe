@@ -13,16 +13,19 @@
 
 
 #main-box {
-  position: relative;
-  top: 0;
-  left: 12%;
+  transform-origin: center center;
+  transition: all ease 5s;
+  text-align: center;
+  height: 1100px;
+  width: 1350px;
+  position: absolute;
 }
 
 #wheel {
-  position: relative;
-  transition: all ease 5s;
-  top: 0;
-  left: 0;
+  position: absolute;
+  top: -42px;
+  left: 15%;
+  transform-origin: center;
 }
 
 .arrow{
@@ -30,18 +33,20 @@
   color: rgb(8, 142, 196);
   position: absolute;
   z-index: 5;
+  left: 15%;
+  top: 0;
 }
 
 #spin-btn {
   position: absolute;
   z-index: 10;
-  left: 0;
+  left: 15%;
   top: 0;
+  transform: unset;
 }
 
 #prizes {
   position: absolute;
-  left: 0;
-  top: 0;
-  transition: all ease 5s;
+  left: 15%;
+  top: -42px;
 }

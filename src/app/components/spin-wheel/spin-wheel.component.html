@@ -2,13 +2,12 @@
   <button class="board-route" routerLink="/board">Go to TictacToe</button>
 
   <!--<h1 *ngIf="color">Your color is {{color}}</h1> -->
-
+  <img src="assets/img/wheel-1-arrow.png" class="arrow">
   <div id="main-box" class="main-box">
-    <img src="assets/img/wheel-1-arrow.png" class="arrow">
     <img id="wheel" src="assets/img/wheel-1-bg.png" alt="wheel" />
-    <img (click)="spin()" id="spin-btn" src="assets/img/wheel-1-spin.png" />
     <img id="prizes" src="assets/img/wheel-prizes.png" />
   </div>
 
+  <img (click)="spin()" id="spin-btn" src="assets/img/wheel-1-spin.png" />
  </div>
 
