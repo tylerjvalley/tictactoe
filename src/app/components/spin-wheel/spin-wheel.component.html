@@ -1,7 +1,7 @@
  <div class="wheel-page">
   <button class="board-route" routerLink="/board">Go to TictacToe</button>
 
-  <!--<h1 *ngIf="color">Your color is {{color}}</h1> -->
+
   <img src="assets/img/wheel-1-arrow.png" class="arrow">
   <div id="main-box" class="main-box">
     <img id="wheel" src="assets/img/wheel-1-bg.png" alt="wheel" />
@@ -9,5 +9,7 @@
   </div>
 
   <img (click)="spin()" id="spin-btn" src="assets/img/wheel-1-spin.png" />
+
+  <h1 *ngIf="prize">Your landed on {{prize}}</h1>
  </div>
 
