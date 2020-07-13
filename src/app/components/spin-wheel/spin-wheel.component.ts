@@ -25,32 +25,41 @@ export class SpinWheelComponent implements OnInit {
       const randomNumber = Math.random();
       const totalDegrees = Math.floor((baseRotations + randomNumber) * 360);
       let prize:string;
-      this.spins += 1;
+      this.spins += 1440;
 
 
-      box.style.transform = "rotate(" + totalDegrees * this.spins + "deg)";
+      if (this.spins < 2880) {
+        box.style.transform = "rotate(" + totalDegrees + "deg)";
+      } else {
+        box.style.transform = "rotate(" + (totalDegrees + this.spins) + "deg)";
+      }
+
+      console.log(this.spins);
+
 
       console.log(totalDegrees);
 
-      if (totalDegrees >= 1800 && totalDegrees <= 1836) { //.036
-        prize = "Silver Coins";
-      } else if (totalDegrees >= 1837 && totalDegrees <= 1873) { //.035
-        prize = "Gold Coins";
-      } else if (totalDegrees >= 1874 && totalDegrees <= 1910) { //.034
-        prize = "Chest";
-      } else if (totalDegrees >= 1911 && totalDegrees <= 1947) { //.033
-        prize = "Re-Spin";
-      } else if (totalDegrees >= 1948 && totalDegrees <= 1984) { //.032
-        prize = "Chest";
-      } else if (totalDegrees >= 1985 && totalDegrees <= 2021) { //.031
-         prize = "Silver Coins";
-      } else if (totalDegrees >= 2022 && totalDegrees <= 2058) { //.030
-        prize = "Gold Coins";
-      } else if (totalDegrees >= 2059 && totalDegrees <= 2095) { //.029
+      if (totalDegrees >= 1800 && totalDegrees <= 1817) { //.036
         prize = "Bronze Coin";
-      } else if (totalDegrees >= 2096 && totalDegrees <= 2132) { //.028
+      } else if (totalDegrees >= 1818 && totalDegrees <= 1854) { //.035
+        prize = "Silver Coins";
+      } else if (totalDegrees >= 1855 && totalDegrees <= 1890) { //.034
+        prize = "Gold Coins";
+      } else if (totalDegrees >= 1891 && totalDegrees <= 1927) { //.033
+        prize = "Chest";
+      } else if (totalDegrees >= 1928 && totalDegrees <= 1963) { //.032
+        prize = "Re-Spin";
+      } else if (totalDegrees >= 1964 && totalDegrees <= 1999) { //.031
+         prize = "Chest";
+      } else if (totalDegrees >= 2000 && totalDegrees <= 2034) { //.030
+        prize = "Silver Coins";
+      } else if (totalDegrees >= 2035 && totalDegrees <= 2069) { //.029
+        prize = "Gold Coins";
+      } else if (totalDegrees >= 2070 && totalDegrees <= 2104) { //.028
+        prize = "Bronze Coin";
+      } else if (totalDegrees >= 2105 && totalDegrees <= 2141) { //.027
         prize = "Big Chest";
-      } else if (totalDegrees >= 2133 && totalDegrees <= 2160) { //.027
+      } else if (totalDegrees >= 2142 && totalDegrees <= 2160) {
         prize = "Bronze Coin";
       }
 
