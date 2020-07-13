@@ -7,13 +7,15 @@ import { SquareComponent } from './components/square/square.component';
 import { BoardComponent } from './components/board/board.component';
 import { SpinWheelComponent } from './components/spin-wheel/spin-wheel.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SquareComponent,
     BoardComponent,
-    SpinWheelComponent
+    SpinWheelComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,29 @@
+.modal-inner {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 25;
+  width: 100%;
+  background: black;
+  opacity: .8;
+
+  .cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10%;
+    .card {
+      height: 250px;
+      width: 150px;
+      background: white;
+      text-align: center;
+      border: 1px solid black;
+
+      h1 {
+        color: red;
+      }
+    }
+  }
+}
+

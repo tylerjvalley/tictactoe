@@ -10,6 +10,8 @@
 
   <img (click)="spin()" id="spin-btn" src="assets/img/wheel-1-spin.png" />
 
-  <h1 *ngIf="prize">Your landed on {{prize}}</h1>
+  <h1 *ngIf="showPrize">You landed on {{prize}}</h1>
+
+  <app-modal *ngIf="showModal"></app-modal>
  </div>
 

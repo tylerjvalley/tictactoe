@@ -14,10 +14,15 @@ export class SpinWheelComponent implements OnInit {
   deg: number = 0;
   spins: number = 0;
   prize: string;
+  modal: boolean = false;
+  showPrize: boolean = false;
+  showModal: boolean = false;
 
   constructor(readonly router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
 
   spin() {
       const box = document.getElementById("main-box");
@@ -34,10 +39,6 @@ export class SpinWheelComponent implements OnInit {
         box.style.transform = "rotate(" + (totalDegrees + this.spins) + "deg)";
       }
 
-      console.log(this.spins);
-
-
-      console.log(totalDegrees);
 
       if (totalDegrees >= 1800 && totalDegrees <= 1817) { //.036
         prize = "Bronze Coin";
@@ -63,11 +64,13 @@ export class SpinWheelComponent implements OnInit {
         prize = "Bronze Coin";
       }
 
-      setTimeout(function() {
-        alert(prize);
-      }, 5500);
+      this.prize = prize;
+      this.modal = true;
 
-
+      setTimeout(() => {
+        this.showPrize = true;
+        this.showModal = true;
+      }, 5500)
    }
 
 }
