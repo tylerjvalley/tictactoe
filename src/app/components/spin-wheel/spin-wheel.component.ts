@@ -65,7 +65,7 @@ export class SpinWheelComponent implements OnInit {
 
       setTimeout(function() {
         alert(prize);
-      }, 4000);
+      }, 5500);
 
 
    }
