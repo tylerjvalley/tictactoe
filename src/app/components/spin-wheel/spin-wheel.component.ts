@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown, faThermometerThreeQuarters } from '@fortawesome/free-solid-svg-icons';
+import { resetFakeAsyncZone } from '@angular/core/testing';
 
 @Component({
   selector: "app-spin-wheel",
@@ -22,35 +23,34 @@ export class SpinWheelComponent implements OnInit {
       const box = document.getElementById("main-box");
       const baseRotations = 5;
       const randomNumber = Math.random();
-      const totalDegrees = (baseRotations + randomNumber) * 360;
+      const totalDegrees = Math.floor((baseRotations + randomNumber) * 360);
       let prize:string;
       this.spins += 1;
 
-      console.log(totalDegrees)
-      const rotation = totalDegrees;
 
-      box.style.transform = "rotate(" + (totalDegrees * this.spins) + "deg)";
+      box.style.transform = "rotate(" + totalDegrees * this.spins + "deg)";
 
+      console.log(totalDegrees);
 
-      if (rotation >= 1800 && rotation <= 1836) { //.036
+      if (totalDegrees >= 1800 && totalDegrees <= 1836) { //.036
         prize = "Silver Coins";
-      } else if (rotation >= 1837 && rotation <= 1873) { //.035
+      } else if (totalDegrees >= 1837 && totalDegrees <= 1873) { //.035
         prize = "Gold Coins";
-      } else if (rotation >= 1874 && rotation <= 1910) { //.034
+      } else if (totalDegrees >= 1874 && totalDegrees <= 1910) { //.034
         prize = "Chest";
-      } else if (rotation >= 1911 && rotation <= 1947) { //.033
+      } else if (totalDegrees >= 1911 && totalDegrees <= 1947) { //.033
         prize = "Re-Spin";
-      } else if (rotation >= 1948 && rotation <= 1984) { //.032
+      } else if (totalDegrees >= 1948 && totalDegrees <= 1984) { //.032
         prize = "Chest";
-      } else if (rotation >= 1985 && rotation <= 2021) { //.031
+      } else if (totalDegrees >= 1985 && totalDegrees <= 2021) { //.031
          prize = "Silver Coins";
-      } else if (rotation >= 2022 && rotation <= 2058) { //.030
+      } else if (totalDegrees >= 2022 && totalDegrees <= 2058) { //.030
         prize = "Gold Coins";
-      } else if (rotation >= 2059 && rotation <= 2095) { //.029
+      } else if (totalDegrees >= 2059 && totalDegrees <= 2095) { //.029
         prize = "Bronze Coin";
-      } else if (randomNumber >= 2096 && rotation <= 2132) { //.028
+      } else if (totalDegrees >= 2096 && totalDegrees <= 2132) { //.028
         prize = "Big Chest";
-      } else if (rotation >= 2133 && rotation <= 2160) { //.027
+      } else if (totalDegrees >= 2133 && totalDegrees <= 2160) { //.027
         prize = "Bronze Coin";
       }
 
@@ -58,5 +58,7 @@ export class SpinWheelComponent implements OnInit {
         alert(prize);
       }, 4000);
 
+
    }
+
 }
