@@ -1,8 +1,10 @@
 
-<button (click)="toggleModal()" class="open-modal-button">Open Modal</button>
+<button (click)="openModal()" class="open-modal-button">Open Modal</button>
 
 <div *ngIf="modal" class="modal-inner">
-  <div class="cards">
+  <img *ngIf="chestClosed" class="chest chest-closed" src="assets/img/chest-closed.png" />
+  <img *ngIf="chestOpen" class="chest chest-open" src="assets/img/chest-open.png" />
+  <div *ngIf="chestOpen" class="cards">
     <div class="card card-1">
       <h1>Card 1</h1>
     </div>
@@ -17,6 +19,6 @@
     </div>
   </div>
 
-  <button (click)="toggleModal()" class="close-modal-button">Close</button>
-  </div>
+  <button (click)="closeModal()" class="close-modal-button">Close</button>
+</div>
 
