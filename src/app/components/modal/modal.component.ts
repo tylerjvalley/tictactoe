@@ -12,4 +12,10 @@ export class ModalComponent implements OnInit {
   ngOnInit() {
   }
 
+  modal:boolean = false;
+
+  toggleModal() {
+    this.modal = !this.modal;
+  }
+
 }

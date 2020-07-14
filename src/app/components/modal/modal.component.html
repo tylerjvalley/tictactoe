@@ -1,5 +1,7 @@
 
-<div class="modal-inner">
+<button (click)="toggleModal()" class="open-modal-button">Open Modal</button>
+
+<div *ngIf="modal" class="modal-inner">
   <div class="cards">
     <div class="card card-1">
       <h1>Card 1</h1>
@@ -14,5 +16,7 @@
       <h1>Card 4</h1>
     </div>
   </div>
+
+  <button class="close-modal-button">Close</button>
   </div>
 

@@ -1,5 +1,6 @@
  <div class="wheel-page">
   <button class="board-route" routerLink="/board">Go to TictacToe</button>
+  <button class="modal-route" routerLink="/modal">Go to modal</button>
 
 
   <img src="assets/img/wheel-1-arrow.png" class="arrow">
@@ -10,8 +11,7 @@
 
   <img (click)="spin()" id="spin-btn" src="assets/img/wheel-1-spin.png" />
 
-  <h1 *ngIf="showPrize">You landed on {{prize}}</h1>
+  <h1 class="prize" *ngIf="showPrize">You landed on {{prize}}</h1>
 
-  <app-modal *ngIf="showModal"></app-modal>
  </div>
 

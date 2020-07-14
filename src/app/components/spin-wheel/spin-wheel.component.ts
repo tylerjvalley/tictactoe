@@ -14,9 +14,8 @@ export class SpinWheelComponent implements OnInit {
   deg: number = 0;
   spins: number = 0;
   prize: string;
-  modal: boolean = false;
   showPrize: boolean = false;
-  showModal: boolean = false;
+
 
   constructor(readonly router: Router) {}
 
@@ -65,11 +64,9 @@ export class SpinWheelComponent implements OnInit {
       }
 
       this.prize = prize;
-      this.modal = true;
 
       setTimeout(() => {
         this.showPrize = true;
-        this.showModal = true;
       }, 5500)
    }
 
