@@ -63,9 +63,8 @@ export class SpinWheelComponent implements OnInit {
         prize = "Bronze Coin";
       }
 
-      this.prize = prize;
-
       setTimeout(() => {
+        this.prize = prize;
         this.showPrize = true;
       }, 5500)
    }
