@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.scss']
+  selector: 'app-chest',
+  templateUrl: './chest.component.html',
+  styleUrls: ['./chest.component.scss']
 })
-export class ModalComponent implements OnInit {
+export class ChestComponent implements OnInit {
 
   constructor() { }
 

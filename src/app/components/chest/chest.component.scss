@@ -25,7 +25,7 @@
     height: 250px;
     width: 250px;
     position: absolute;
-    top: 35%;
+    top: 20%;
     left: 44%;
   }
 
@@ -44,6 +44,8 @@
       position: relative;
       animation-name: card1animation;
       animation-duration: 3s;
+      animation-timing-function: ease-in;
+      font-size: 20px;
 
       h1 {
         color: white;
@@ -53,16 +55,19 @@
     .card-2 {
       background: red;
       animation-name: card2animation;
+
     }
 
     .card-3 {
       background: blue;
       animation-name: card3animation;
+
     }
 
     .card-4 {
       background: green;
       animation-name: card4animation;
+
     }
   }
 
@@ -81,22 +86,26 @@
 }
 
 @keyframes card1animation {
-  0% {  bottom: 150px; left: 504px; }
-  100% {  bottom: 0; left: 0; }
+  0% {  bottom: -50px; left: 504px; height: 0; width: 0; font-size: 0; display: block;}
+  30% { bottom: 150px; display: block; }
+  100% {  bottom: 0; left: 0; height: 250px; width: 150px; font-size: 20px; display: block; }
 }
 
 @keyframes card2animation {
-  0% { bottom: 150px; left: 201px; }
-  100% { bottom: 0; left: 0; }
+  0% { bottom: -50px; left: 201px; height: 0; width: 0; font-size: 0; display: block; }
+  30% { bottom: 150px; }
+  100% { bottom: 0; left: 0; height: 250px; width: 150px; font-size: 20px; }
 }
 
 @keyframes card3animation {
-  0% { bottom: 150px; right: 101px; }
-  100% { bottom: 0; right: 0; }
+  0% { bottom: -50px; right: 101px; height: 0; width: 0; font-size: 0; }
+  30% { bottom: 150px; }
+  100% { bottom: 0; right: 0; height: 250px; width: 150px; font-size: 20px; }
 }
 
 @keyframes card4animation {
-  0% { bottom: 150px; right: 405px; }
-  100% { bottom: 0; right: 0; }
+  0% { bottom: -50px; right: 405px; height: 0; width: 0; font-size: 0; }
+  30% { bottom: 150px; }
+  100% { bottom: 0; right: 0; height: 250px; width: 150px; font-size: 20px; }
 }
 
