@@ -12,18 +12,60 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 15%;
     .card {
       height: 250px;
       width: 150px;
       background: white;
       text-align: center;
       border: 1px solid black;
+      background: purple;
+      position: relative;
+      animation-name: card1animation;
+      animation-duration: 1s;
 
       h1 {
-        color: red;
+        color: white;
       }
     }
+
+    .card-2 {
+      background: red;
+      animation-name: card2animation;
+      animation-duration: 2s;
+    }
+
+    .card-3 {
+      background: blue;
+      animation-name: card3animation;
+      animation-duration: 3s;
+    }
+
+    .card-4 {
+      background: green;
+      animation-name: card4animation;
+      animation-duration: 4s;
+    }
   }
+}
+
+@keyframes card1animation {
+  0% {  bottom: 115px; left: 200px; }
+  100% {  bottom: 0; left: 0; }
+}
+
+@keyframes card2animation {
+  0% { bottom: 115px; right: 350px; }
+  100% { bottom: 0; right: 0; }
+}
+
+@keyframes card3animation {
+  0% { bottom: 115px; right: 900px; }
+  100% { bottom: 0; right: 0; }
+}
+
+@keyframes card4animation {
+  0% { bottom: 115px; right: 1450px; }
+  100% { bottom: 0; right: 0; }
 }
 
