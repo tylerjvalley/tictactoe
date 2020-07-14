@@ -1,5 +1,5 @@
 
-<button (click)="openModal()" class="open-modal-button">Open Modal</button>
+<button *ngIf="!modal" (click)="openModal()" class="open-modal-button">Open Modal</button>
 
 <div *ngIf="modal" class="modal-inner">
   <img *ngIf="chestClosed" class="chest chest-closed" src="assets/img/chest-closed.png" />
