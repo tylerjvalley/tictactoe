@@ -18,10 +18,12 @@ export class ChestComponent implements OnInit {
 
   openModal() {
     this.modal = !this.modal;
-
      setTimeout(() => {
        this.chestClosed = false;
        this.chestOpen = true;
+       document.getElementById("closed").style.visibility = "hidden";
+       document.getElementById("open").style.visibility = "visible";
+       document.getElementById("cards").style.visibility = "visible";
      }, 2000);
   }
 
