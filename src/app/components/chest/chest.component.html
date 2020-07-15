@@ -1,20 +1,20 @@
 
-<button *ngIf="!modal" (click)="openModal()" class="open-modal-button">Open Modal</button>
+<button (click)="openModal()" class="open-modal-button" id="openButton">Open Modal</button>
 
-<div *ngIf="modal" class="modal-inner">
+<div class="modal-inner" id="modal" [ngClass]="{'modal-open': modal}">
   <img class="chest chest-closed" id="closed" src="assets/img/chest-closed.png" />
   <img class="chest chest-open" id="open" src="assets/img/chest-open.png" />
   <div class="cards" id="cards">
-    <div class="card card-1">
+    <div class="card card-1" [ngClass]="{ 'animation': chestOpen }">
       <h1>Card 1</h1>
     </div>
-    <div class="card card-2">
+    <div class="card card-2" [ngClass]="{ 'animation': chestOpen }">
       <h1>Card 2</h1>
     </div>
-    <div class="card card-3">
+    <div class="card card-3" [ngClass]="{ 'animation': chestOpen }">
       <h1>Card 3</h1>
     </div>
-    <div class="card card-4">
+    <div class="card card-4" [ngClass]="{ 'animation': chestOpen }">
       <h1>Card 4</h1>
     </div>
   </div>

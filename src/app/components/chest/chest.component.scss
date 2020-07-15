@@ -43,11 +43,7 @@
       border: 1px solid black;
       background: purple;
       position: relative;
-      animation-name: card1animation;
-      animation-duration: 10s;
-      animation-timing-function: ease-in;
       font-size: 20px;
-
       h1 {
         color: white;
       }
@@ -55,20 +51,14 @@
 
     .card-2 {
       background: red;
-      animation-name: card2animation;
-
     }
 
     .card-3 {
       background: blue;
-      animation-name: card3animation;
-
     }
 
     .card-4 {
       background: green;
-      animation-name: card4animation;
-
     }
   }
 
@@ -84,6 +74,27 @@
     left: 44%;
     bottom: 8%;
   }
+}
+
+.animation {
+  animation-duration: 10s;
+  animation-timing-function: ease-in;
+}
+
+.card-1.animation {
+   animation-name: card1animation;
+}
+
+.card-2.animation {
+  animation-name: card2animation;
+}
+
+.card-3.animation {
+  animation-name: card3animation;
+}
+
+.card-4.animation {
+  animation-name: card4animation;
 }
 
 @keyframes card1animation {
@@ -113,3 +124,4 @@
 #open {
   visibility: hidden;
 }
+
