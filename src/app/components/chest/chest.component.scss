@@ -85,26 +85,26 @@
 }
 
 @keyframes card1animation {
-  0% {  bottom: -70px; left: 470px; height: 0; width: 0; font-size: 0; display: block;}
-  60% { bottom: 150px; display: block; }
+  0% {  bottom: -50px; left: 400px; height: 0; width: 0; font-size: 0; display: block;}
+  40% { bottom: 250px; display: block; }
   100% {  bottom: 0; left: 0; height: 250px; width: 150px; font-size: 20px; display: block; }
 }
 
 @keyframes card2animation {
-  0% { bottom: -70px; left: 150px; height: 0; width: 0; font-size: 0; display: block; }
-  65% { bottom: 150px; }
+  0% { bottom: -50px; left: 134px; height: 0; width: 0; font-size: 0; display: block; }
+  40% { bottom: 250px; }
   100% { bottom: 0; left: 0; height: 250px; width: 150px; font-size: 20px; }
 }
 
 @keyframes card3animation {
-  0% { bottom: -70px; right: 150px; height: 0; width: 0; font-size: 0; }
-  60% { bottom: 150px; }
+  0% { bottom: -50px; right: 131px; height: 0; width: 0; font-size: 0; }
+  40% { bottom: 250px; }
   100% { bottom: 0; right: 0; height: 250px; width: 150px; font-size: 20px; }
 }
 
 @keyframes card4animation {
-  0% { bottom: -70px; right: 470px; height: 0; width: 0; font-size: 0; }
-  60% { bottom: 150px; }
+  0% { bottom: -50px; right: 397px; height: 0; width: 0; font-size: 0; }
+  40% { bottom: 250px; }
   100% { bottom: 0; right: 0; height: 250px; width: 150px; font-size: 20px; }
 }
 
