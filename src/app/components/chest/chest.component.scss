@@ -43,7 +43,8 @@
       background: purple;
       position: relative;
       animation-name: card1animation;
-      animation-duration: 3s;
+      animation-duration: 10s;
+      animation-timing-function: ease-in;
       font-size: 20px;
 
       h1 {
