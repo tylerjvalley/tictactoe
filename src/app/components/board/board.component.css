@@ -1,0 +1,35 @@
+.tictactoe-page {
+  text-align: center;
+}
+
+.tictactoe-page button {
+  height: 40px;
+  width: 12%;
+  border: 1px solid cyan;
+  color: cyan;
+  background: transparent;
+  border-radius: 4px;
+}
+
+.tictactoe-page .spin-page {
+  border: 1px solid red;
+  color: red;
+  position: absolute;
+  right: 10px;
+}
+
+.tictactoe-page main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 200px 200px;
+      grid-template-columns: 200px 200px 200px;
+  grid-gap: 0;
+  margin-left: 20em;
+  margin-top: 2em;
+}
+
+.tictactoe-page main square {
+  border: 1px solid black;
+  height: 200px;
+}
+/*# sourceMappingURL=board.component.css.map */
