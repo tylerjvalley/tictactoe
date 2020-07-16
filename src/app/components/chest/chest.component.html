@@ -4,7 +4,7 @@
 <div class="modal-inner" id="modal" [ngClass]="{'modal-open': modal}">
   <img class="chest chest-closed" id="closed" src="assets/img/chest-closed.png" />
   <img class="chest chest-open" id="open" src="assets/img/chest-open.png" />
-  <div class="cards" id="cards">
+  <div class="cards" id="cards" [ngClass]="{ 'animation': chestOpen }">
     <div class="card card-1" [ngClass]="{ 'animation': chestOpen }">
       <h1>Card 1</h1>
     </div>

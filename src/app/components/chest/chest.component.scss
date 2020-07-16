@@ -1,68 +1,85 @@
-.open-modal-button {
-  background: transparent;
-  border: 1px solid cyan;
-  color: cyan;
-  width: 200px;
-  height: 100px;
-  border-radius: 8px;
-  position: absolute;
-  left: 45%;
-  top: 40%;
-  font-size: 27px;
-}
+  .open-modal-button {
+    background: transparent;
+    border: 1px solid cyan;
+    color: cyan;
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+    position: absolute;
+    left: 45%;
+    top: 40%;
+    font-size: 27px;
+  }
 
-.modal-inner {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  z-index: 25;
-  width: 100%;
-  background: black;
-  opacity: .8;
+  .modal-inner {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 25;
+    width: 100%;
+    background: black;
+    opacity: .8;
+  }
 
-  .chest {
+  .modal-inner .chest {
     height: 250px;
     width: 250px;
     position: absolute;
-    top: 400px;
+    bottom: 5%;
     left: 43%;
   }
 
-  .cards {
+  .modal-inner .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    margin-top: 150px;
+    position: absolute;
+    bottom: 42%;
+    left: 19%;
     visibility: hidden;
-    .card {
-      height: 250px;
-      width: 150px;
-      background: white;
-      text-align: center;
-      border: 1px solid black;
-      background: purple;
-      position: relative;
-      font-size: 20px;
-      h1 {
-        color: white;
-      }
-    }
 
-    .card-2 {
-      background: red;
-    }
-
-    .card-3 {
-      background: blue;
-    }
-
-    .card-4 {
-      background: green;
-    }
+    @media (min-height: 750px) { bottom: 39%; }
+    @media (min-height: 800px) { bottom: 36%; }
+    @media (min-height: 850px) { bottom: 34%; }
+    @media (min-height: 900px) { bottom: 33%; }
   }
 
-  .close-modal-button {
+  .modal-inner .cards .card {
+    height: 250px;
+    width: 150px;
+    background: white;
+    text-align: center;
+    border: 1px solid black;
+    background: purple;
+    position: relative;
+    font-size: 20px;
+    margin: 0 2em;
+  }
+
+  .modal-inner .cards .card h1 {
+    color: white;
+  }
+
+  .modal-inner .cards .card-2 {
+    background: red;
+  }
+
+  .modal-inner .cards .card-3 {
+    background: blue;
+  }
+
+  .modal-inner .cards .card-4 {
+    background: green;
+  }
+
+  .modal-inner .close-modal-button {
     background: transparent;
     border: 1px solid red;
     color: red;
@@ -74,54 +91,212 @@
     left: 1%;
     bottom: 1%;
   }
-}
 
-.animation {
-  animation-duration: 10s;
-  animation-timing-function: ease-in;
-}
+  .animation {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
 
-.card-1.animation {
-   animation-name: card1animation;
-}
+  .cards.animation {
+    -webkit-animation-name: cardsanimation;
+    animation-name: cardsanimation;
+  }
 
-.card-2.animation {
-  animation-name: card2animation;
-}
+  .card-1.animation {
+    -webkit-animation-name: card1animation;
+    animation-name: card1animation;
+  }
 
-.card-3.animation {
-  animation-name: card3animation;
-}
+  .card-2.animation {
+    -webkit-animation-name: card2animation;
+    animation-name: card2animation;
+  }
 
-.card-4.animation {
-  animation-name: card4animation;
-}
+  .card-3.animation {
+    -webkit-animation-name: card3animation;
+    animation-name: card3animation;
+  }
 
-@keyframes card1animation {
-  0% { bottom: -360px; left: 30.5%; height: 5px; width: 5px; font-size: 0; }
-  //30% { bottom: 20em; display: block; }
-  100% {  bottom: 0; left: 0; height: 250px; width: 150px; font-size: 20px; }
-}
+  .card-4.animation {
+    -webkit-animation-name: card4animation;
+    animation-name: card4animation;
+  }
 
-@keyframes card2animation {
-  0% { bottom: -360px; left: 10.5%; height: 5px; width: 5px; font-size: 0;  }
-  //30% { bottom: 20em; }
-  100% { bottom: 0; left: 0; height: 250px; width: 150px; font-size: 20px; }
-}
+  @-webkit-keyframes card1animation {
+    0% {
+      bottom: -117px;
+      left: 30.5%;
+      height: 5px;
+      width: 5px;
+      font-size: 0;
+    }
 
-@keyframes card3animation {
-  0% { bottom: -360px; right: 9.5%; height: 5px; width: 5px; font-size: 0; }
-  //30% { bottom: 20em; }
-  100% { bottom: 0; right: 0; height: 250px; width: 150px; font-size: 20px; }
-}
+    100% {
+      bottom: 0;
+      left: 0;
+      height: 250px;
+      width: 150px;
+      font-size: 20px;
+    }
+  }
 
-@keyframes card4animation {
-  0% { bottom: -360px; right: 29.5%; height: 5px; width: 5px; font-size: 0; }
-  //30% { bottom: 20em; }
-  100% { bottom: 0; right: 0; height: 250px; width: 150px; font-size: 20px; }
-}
+  @keyframes card1animation {
+    0% {
+      bottom: -117px;
+      left: 30.5%;
+      height: 5px;
+      width: 5px;
+      font-size: 0;
+    }
 
-#open {
-  visibility: hidden;
-}
+    100% {
+      bottom: 0;
+      left: 0;
+      height: 250px;
+      width: 150px;
+      font-size: 20px;
+    }
+  }
 
+  @-webkit-keyframes card2animation {
+    0% {
+      bottom: -117px;
+      left: 10.5%;
+      height: 5px;
+      width: 5px;
+      font-size: 0;
+    }
+
+    100% {
+      bottom: 0;
+      left: 0;
+      height: 250px;
+      width: 150px;
+      font-size: 20px;
+    }
+  }
+
+  @keyframes card2animation {
+    0% {
+      bottom: -117px;
+      left: 10.5%;
+      height: 5px;
+      width: 5px;
+      font-size: 0;
+    }
+
+    100% {
+      bottom: 0;
+      left: 0;
+      height: 250px;
+      width: 150px;
+      font-size: 20px;
+    }
+  }
+
+  @-webkit-keyframes card3animation {
+    0% {
+      bottom: -117px;
+      right: 9.5%;
+      height: 5px;
+      width: 5px;
+      font-size: 0;
+    }
+
+    100% {
+      bottom: 0;
+      right: 0;
+      height: 250px;
+      width: 150px;
+      font-size: 20px;
+    }
+  }
+
+  @keyframes card3animation {
+    0% {
+      bottom: -117px;
+      right: 9.5%;
+      height: 5px;
+      width: 5px;
+      font-size: 0;
+    }
+
+    100% {
+      bottom: 0;
+      right: 0;
+      height: 250px;
+      width: 150px;
+      font-size: 20px;
+    }
+  }
+
+  @-webkit-keyframes card4animation {
+    0% {
+      bottom: -117px;
+      right: 29.5%;
+      height: 5px;
+      width: 5px;
+      font-size: 0;
+    }
+
+    100% {
+      bottom: 0;
+      right: 0;
+      height: 250px;
+      width: 150px;
+      font-size: 20px;
+    }
+  }
+
+  @keyframes card4animation {
+    0% {
+      bottom: -117px;
+      right: 29.5%;
+      height: 5px;
+      width: 5px;
+      font-size: 0;
+    }
+
+    100% {
+      bottom: 0;
+      right: 0;
+      height: 250px;
+      width: 150px;
+      font-size: 20px;
+    }
+  }
+
+  @-webkit-keyframes cardsanimation {
+    0% {
+      bottom: -117px;
+      right: 29.5%;
+      height: 5px;
+      width: 5px;
+      font-size: 0;
+    }
+
+    100% {
+      bottom: 0;
+      right: 0;
+      height: 250px;
+      width: 150px;
+      font-size: 20px;
+    }
+  }
+
+  @keyframes cardsanimation {
+    0% {
+      left: 49%;
+    }
+
+    100% {
+      left: 19%;
+    }
+  }
+
+
+  #open {
+    visibility: hidden;
+  }
