@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Injectable } from '@angular/core';
 
 @Component({
   selector: 'square',
@@ -6,7 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./square.component.scss']
 })
 
-//simple UI component
+
+@Injectable({
+  providedIn: 'root'
+})
+
 export class SquareComponent {
 
   @Input() value: 'X' | 'O';
