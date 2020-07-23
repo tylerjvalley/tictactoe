@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Injectable } from '@angular/core';
 
 @Component({
   selector: 'square',
@@ -7,6 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 
+<<<<<<< HEAD
+=======
+@Injectable({
+  providedIn: 'root'
+})
+
+>>>>>>> 7547a90ee8c8a868106119db33172dfddd904db4
 export class SquareComponent {
 
   public selected:boolean = false;
