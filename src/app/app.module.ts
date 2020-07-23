@@ -9,7 +9,7 @@ import { SpinWheelComponent } from './components/spin-wheel/spin-wheel.component
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ChestComponent } from './components/chest/chest.component';
 import { XSquareComponent } from './components/x-square/x-square.component';
-import { YSquareComponent } from './components/y-square/y-square.component';
+import { OSquareComponent } from './components/o-square/o-square.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { YSquareComponent } from './components/y-square/y-square.component';
     SpinWheelComponent,
     ChestComponent,
     XSquareComponent,
-    YSquareComponent
+    OSquareComponent
   ],
   imports: [
     BrowserModule,

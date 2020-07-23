@@ -6,9 +6,10 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./square.component.scss']
 })
 
-//simple UI component
+
 export class SquareComponent {
 
-  @Input() value: 'X' | 'O';
+  public selected:boolean = false;
+  public winning:boolean = false;
 
 }
