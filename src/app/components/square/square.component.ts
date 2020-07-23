@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Injectable } from '@angular/core';
+import { BoardComponent } from '../board/board.component';
 
 @Component({
   selector: 'square',
@@ -7,16 +8,17 @@ import { Component, OnInit, Input, Injectable } from '@angular/core';
 })
 
 
-<<<<<<< HEAD
-=======
 @Injectable({
   providedIn: 'root'
 })
 
->>>>>>> 7547a90ee8c8a868106119db33172dfddd904db4
-export class SquareComponent {
+export class SquareComponent extends BoardComponent implements OnInit {
 
-  public selected:boolean = false;
-  public winning:boolean = false;
+  @Input() value: 'X' | 'O';
+
+ 
+  ngOnInit() {
+  
+  }
 
 }

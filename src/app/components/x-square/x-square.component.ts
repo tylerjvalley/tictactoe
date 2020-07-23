@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { SquareComponent } from '../square/square.component';
 
 @Component({
@@ -6,13 +6,12 @@ import { SquareComponent } from '../square/square.component';
   templateUrl: './x-square.component.html',
   styleUrls: ['./x-square.component.scss']
 })
-export class XSquareComponent extends SquareComponent {
+export class XSquareComponent {
 
-
-  
+  @Input() value: 'X';
 
   constructor() {
-    super();
+  
    }
 
   ngOnInit() {

@@ -10,11 +10,12 @@ export class BoardComponent implements OnInit {
   squares: any[];
   xIsNext: boolean;
   winner: string;
+  winningLines: any[];
 
   constructor( readonly router: Router ) { }
 
   ngOnInit() {
-
+  
   }
 
   newGame() {
@@ -34,6 +35,7 @@ export class BoardComponent implements OnInit {
     }
 
     this.winner = this.calculateWinner();
+    
   }
 
   calculateWinner() {
@@ -55,6 +57,7 @@ export class BoardComponent implements OnInit {
         this.squares[a] === this.squares[b] &&
         this.squares[a] === this.squares[c]
       ) {
+        this.winningLines = [a,b,c];
         return this.squares[a];
       }
     }
