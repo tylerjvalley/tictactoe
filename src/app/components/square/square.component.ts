@@ -1,24 +1,27 @@
-import { Component, OnInit, Input, Injectable } from '@angular/core';
-import { BoardComponent } from '../board/board.component';
+import { Component, OnInit, Input } from '@angular/core';
+import { ChildActivationStart } from '@angular/router';
 
 @Component({
   selector: 'square',
   templateUrl: './square.component.html',
   styleUrls: ['./square.component.scss']
 })
+export class SquareComponent implements OnInit {
 
+  @Input() value;
+  @Input() position;
+  @Input() winners;
+  @Input() isWinningSquare;
+  @Input() endGame;
 
-@Injectable({
-  providedIn: 'root'
-})
-
-export class SquareComponent extends BoardComponent implements OnInit {
-
-  @Input() value: 'X' | 'O';
-
+  positionsArray = new Array;
  
-  ngOnInit() {
+
   
+  constructor() { }
+
+  ngOnInit() {
+   console.log(this.winners);
   }
 
 }

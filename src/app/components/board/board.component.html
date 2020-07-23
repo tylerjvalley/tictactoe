@@ -9,7 +9,15 @@
 
 
   <main>
-    <square *ngFor="let val of squares; let i = index" [value]="val" (click)="makeMove(i)" id="square" [ngClass]="{ 'winning': winningSquare }"></square>
+   <square 
+    *ngFor="let value of squares; let i = index" 
+    [value]="value"
+    (click)="makeMove(i)"
+    [isWinningSquare]="isWinningSquare"
+    [winners]="winners"
+    [position]="i"
+    [endGame]="endGame"
+  ></square>
   </main>
 </div>
 

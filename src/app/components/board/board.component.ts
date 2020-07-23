@@ -7,34 +7,59 @@ import { Router } from "@angular/router";
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit {
+  
   squares: any[];
-  xIsNext: boolean;
-  winner: string;
+  value: string = "X";
+  playerX: boolean = true;
+  position: number;
   winningLines: any[];
+  endGame: boolean = false;
+  isWinningSquare: boolean;
+  winners = new Array;
 
   constructor( readonly router: Router ) { }
 
   ngOnInit() {
-  
+   
   }
 
   newGame() {
     this.squares = Array(9).fill(null);
-    this.winner = null;
-    this.xIsNext = true;
+    this.endGame = false;
   }
 
-  get player() {
-    return this.xIsNext ? 'X' : 'O';
-  }
-
-  makeMove(idx: number) {
-    if (!this.squares[idx]) {
-      this.squares.splice(idx, 1, this.player);
-      this.xIsNext = !this.xIsNext;
+  makeMove(id: number) {
+    this.position = id;
+    let player
+    if (this.playerX) {
+      player = 'X';
+    } else {
+      player = 'O';
     }
 
-    this.winner = this.calculateWinner();
+    if (!this.squares[id]) {
+      this.squares.splice(id, 1, player);
+    }
+
+    this.playerX = !this.playerX;
+
+    this.calculateWinner();
+    this.winners.push(id);
+    if (this.winningLines) {
+      let greenSquares = new Array;
+      for (let i = 0; i < this.winners.length; i++) {
+        if (
+          this.winningLines[0] === this.winners[i] ||
+          this.winningLines[1] === this.winners[i] ||
+          this.winningLines[2] === this.winners[i]
+        ) {
+          greenSquares.push(this.winners[i]);
+        }
+      }
+      this.winners = greenSquares;
+      console.log(this.winners);
+    }
+
     
   }
 
@@ -50,6 +75,7 @@ export class BoardComponent implements OnInit {
       [2,4,6]
     ];
 
+    
     for (let i = 0; i < lines.length; i++) {
       const [a,b,c] = lines[i];
       if (
@@ -58,6 +84,7 @@ export class BoardComponent implements OnInit {
         this.squares[a] === this.squares[c]
       ) {
         this.winningLines = [a,b,c];
+        this.endGame = true;
         return this.squares[a];
       }
     }
